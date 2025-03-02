@@ -1,0 +1,617 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-size: 20px;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+#wrapper
+{
+  height:100vh;
+  overflow-y:auto;
+  overflow-x: hidden;
+}
+.container
+{
+  margin: 0 200px;
+  width: 1200px;
+
+}
+.navbar
+{
+ 
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+ 
+ justify-content: space-between;
+
+}
+.logo
+{
+  
+  width: 80px;
+margin-top: -19px;
+}
+.logo2{
+  margin: -19px;
+  font-size: 24px;
+ font-weight: 800;
+}
+.navbar-left{
+display: flex;
+justify-content: baseline;
+align-items: center;
+}
+
+.navbar-right{
+ display: flex;
+ gap: 20px;
+
+}
+.font-nav a
+{
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+.font-nav:hover
+{
+font-weight: 900;
+}
+
+/*middle-scection*/
+
+.middle-section
+{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+ gap:200px;
+ margin: 100px auto;
+ 
+}
+.middle-left
+{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.middle-right
+{
+  position: relative;
+}
+.middle-right img{
+
+  padding: 15px;
+  height: 370px;
+  width: 300px;
+  transition:all 1s;
+  animation: scaleImage 5s linear infinite;
+}
+.middle-right img{
+  z-index:-9;
+}
+.faded-text
+{
+  position:absolute;
+  user-select:none;
+  font-size: 7em;
+  color:rgb(231,231,231);
+ bottom: -50%;
+  left:-8%;
+  font-weight: bold;
+z-index: -1;
+ 
+}
+@keyframes scaleImage {
+
+  0%{
+      filter:grayscale(0);
+      transform:scale(1);
+      
+  }
+
+  50%{
+      transform:scale(1.1);
+      filter:grayscale(1);
+      box-shadow: 3px 3px 10px black;
+  }
+
+  100%{
+      transform:scale(1);
+      filter:grayscale(0);
+  }
+  
+}
+.heading1
+{
+  font-size: 30px;
+}
+.role
+{
+  color: rgb(52, 52, 231);
+  font-size: 33px;
+  font-weight: 999;
+}
+/*Hire_button*/
+.btn
+{
+width: fit-content;
+color: rgb(254, 254, 254);
+background-color:#e84949;
+padding: 8px 28px;
+font-size: 18px;
+box-shadow: 1px 1px 3px 0px rgb(0, 0, 0);
+position: relative;
+
+transition: color 0.5s;
+}
+.btn::before
+{
+ content: "";
+ background-color: rgb(255, 252, 252);
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ top: 0;
+ transform: scaleX(0);
+ transform-origin:left ;
+ transition: all ease 1s;
+
+}
+.btn:hover::before{
+ transform: scaleX(1);
+ 
+}
+.btn:hover
+{
+ color: black;
+}
+/* projects  (page 2)*/
+
+#Project
+{
+  margin-top: 165px;
+  background-color: rgb(232,232,232);
+  color: white;
+}
+
+.project-container
+{
+width: 1200px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 90px;
+
+}
+
+.heading
+{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 999;
+  color: #e84949;
+}
+.project-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:90%;
+  height:550px;
+  margin-bottom: 20px;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  position:relative;
+  box-shadow:0px 0px 40px #1f1f1f;
+
+}
+
+.project-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #1f1f1f9a;
+
+  /* transform: scaleX(1); */
+}
+.project-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+  transform:scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s;
+  z-index:1;
+}
+
+.project-card:hover::before{
+  transform:scaleX(1);
+}
+.project-card:hover .project-skills
+{
+  scale: 1.1;
+}
+.project-card img
+{
+  width: 40px;
+  
+}
+.project1
+{
+ 
+
+ background-image: url(https://codehelp-portfolio-website.netlify.app/images/projects/Project1.png);
+}
+.project2
+{
+background-image: url(https://codehelp-portfolio-website.netlify.app/images/projects/Project2.png);
+}
+.project3
+{
+  background-image: url(https://codehelp-portfolio-website.netlify.app/images/projects/Project3.png);
+  
+}
+.project4
+{
+  background-image: url(https://codehelp-portfolio-website.netlify.app/images/projects/Project4.png);
+}
+.project-left
+{
+  left:-15px;
+  
+}
+.project-right
+{
+ right:-120px;
+
+  
+}
+
+.project-skills
+{
+  width:60%;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  z-index: 1;
+  transition: all 1s;
+
+}
+
+.project-1
+{
+margin-left: -120px;
+}
+.project-heading
+{
+  font-size: 53px;
+  font-weight:990;
+}
+.project-description
+{
+  font-style: italic;
+}
+
+.buttons
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.btn
+{
+border: none;
+color: rgb(254, 254, 254);
+background-color:#e84949;
+padding: 10px 34px;
+font-size: 18px;
+box-shadow: 1px 1px 3px 0px rgb(0, 0, 0);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+}
+.btn::before
+{
+ content: "";
+ background-color: rgb(255, 252, 252);
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ top: 0;
+ transform: scaleX(0);
+ transform-origin:left ;
+ transition: all ease 1s;
+ z-index: -1;
+}
+.btn:hover::before{
+ transform: scaleX(1);
+ 
+}
+.btn:hover
+{
+ color: black;
+}
+
+.GitHubLink
+{
+ scale: 2.4;
+ transition: all 0.7s;
+}
+.GitHubLink:hover
+{
+ color: #e84949;
+}
+
+.project-2
+{
+  margin-left:400px;
+}
+.project-num
+{
+  opacity: 0;
+  position: absolute;
+  scale: 2;
+  font-size: 100px;
+ color: white;
+ z-index: 999;
+ font-weight: 999;
+}
+.project-num-odd
+{
+
+ right:0;
+ top: 20px;
+
+}
+
+.project-card:hover .project-num
+{
+  opacity: 1;
+}
+
+.project-num-even{
+  left:15px;
+  top:20px;
+}
+/* page 3 */
+.skill-section
+{
+  display: flex;
+  margin-top: 200px;
+  position: relative;
+}
+.skill-left
+{
+width: 50%;
+height: 100%;
+display: flex;
+
+flex-direction: column;
+gap: 20px;
+
+}
+.skill-right
+{
+  width: 50%;
+ height: 500px;
+ position: relative;
+
+}
+.style-m
+{
+font-size:80px;
+}
+.skill-heading
+{
+  line-height: 45px;
+  font-size: 50px;
+  color: #e84949;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.my-description p
+{
+  
+  font-size: 16px;
+  margin-top: 10px;
+}
+.blob-blob{
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  animation: blob 2s linear infinite alternate;
+ 
+}
+@keyframes blob {
+  50%{transform: translate(20px,-20px);}
+  
+}
+
+.skill-icons
+{
+  scale: 1.1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 90%;
+  height: 90%;
+ left: 80px;
+ position: absolute;
+}
+.skill-icons img
+{
+height: 80px;
+width: 80px;
+transition: all 0.5s;
+}
+.skill-icons img:hover{
+  transform: scale(1.3);
+}
+.skill-faded-text
+{
+position: absolute;
+font-size: 9em;
+color:rgb(231,231,231);
+font-weight: 999;
+bottom:-200px;
+right:-100px;
+}
+/* page 4*/
+#contactme
+{
+  margin-top: 150px;
+  background-color: rgb(232,232,232);
+  color: white;
+  padding-bottom: 50px;
+}
+.contactme-heading
+{
+  margin-bottom: 50px;
+}
+.contactme-heading h1
+{
+  font-size:5rem;
+  color: #e84949;
+}
+
+.contactme-heading h2
+{
+  font-size: 2rem;
+ color: #343d68aa;
+}
+
+.forms
+{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+
+ gap: 20px;
+
+}
+.forms input,textarea
+{
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 10px #1f1f1f;
+  border-radius: 5px;
+  border: none;
+ padding: 10px 20px;
+}
+.form-container
+{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-icon{
+  margin-left: 10px;
+}
+.btn:hover .submit-icon
+{
+  color: #1f1f1f;
+}
+#contactmebtn
+{
+ 
+  transition: all 0.6s;
+}
+#contactmebtn:hover{
+  scale: 0.9;
+}
+/* footer */
+footer
+{
+  position: relative;
+  background:#343d68;
+  padding:60px;
+  
+}
+.footer-container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+}
+.footer-container a,i
+{
+  color: white;
+  text-decoration: none;
+
+}
+.footer-left
+{
+  display: flex;
+  gap: 20px;
+}
+.footer-right i
+{
+
+  margin-left: 20px;;
+ scale: 1.4;
+ 
+}
+.footer-faded-text {
+
+    font-size: 5em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+}
+
+.hovering:hover a
+{
+  color: #e84949;
+}
+i:hover
+{
+  color: #e84949;
+}
+
+
+
+
+@media (max-width:1200px) {
+  .heading {
+    padding-top: 30px;
+    color:#e84949;
+   text-align: center;
+    font-size: 40px;
+  }
+}
+@media (max-width:1200px) {
+.project-container {
+  width: fit-content;
+
+}
+}
+
+
+/* Project Section End */
+
+
